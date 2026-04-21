@@ -3,6 +3,9 @@ const fs = require('fs')
 const router = express.Router()
 
 router.route('/')
+    .get((req,res) => {
+        res.json({Message: 'Welcome to the CRUD API'})
+    })
     .post((req,res) => {
         const content = JSON.stringify(req.body)
         fs.writeFile(`./info/${req.body.id}.json`, content, err => {
