@@ -5,6 +5,7 @@ const router = express.Router()
 router.route('/')
     .get((req,res) => {
         res.json({Message: 'Welcome to the CRUD API'})
+        
     })
     .post((req,res) => {
         const content = JSON.stringify(req.body)
